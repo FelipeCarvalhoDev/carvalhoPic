@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "aluraPic": {
+    "carvalhoPic": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/aluraPic",
+            "outputPath": "dist/carvalhoPic",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,6 +23,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -50,18 +52,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "aluraPic:build"
+            "browserTarget": "carvalhoPic:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "aluraPic:build:production"
+              "browserTarget": "carvalhoPic:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "aluraPic:build"
+            "browserTarget": "carvalhoPic:build"
           }
         },
         "test": {
@@ -95,7 +97,7 @@
         }
       }
     },
-    "aluraPic-e2e": {
+    "carvalhoPic-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +105,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "aluraPic:serve"
+            "devServerTarget": "carvalhoPic:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "aluraPic:serve:production"
+              "devServerTarget": "carvalhoPic:serve:production"
             }
           }
         },
@@ -123,5 +125,5 @@
       }
     }
   },
-  "defaultProject": "aluraPic"
+  "defaultProject": "carvalhoPic"
 }
